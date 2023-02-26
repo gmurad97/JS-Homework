@@ -1,0 +1,84 @@
+*,
+*::before,
+*::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("../img/background/bg.png");
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Courier";
+}
+
+input[type="text"]{
+    height: auto;
+    width: 150px;
+    background-color: #b2bec3;
+    border: 1px solid #2d3436;
+    border-radius: 3px;
+    caret-color: #c0392b;
+    padding: 5px 10px;
+    color: #2d3436;
+}
+
+input[type="text"]:focus{
+    outline: none;
+}
+
+button[type="button"]{
+    position: relative;
+    background-color: #2d3436;
+    border: 1px solid #2d3436;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button[type="button"]::before{
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #2d3436;
+    border: 1px solid #2d3436;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+button[type="button"]:hover::before{
+    animation: pulseBtn 1.1s linear infinite;
+}
+
+@keyframes pulseBtn {
+    from{
+        transform: scale(1);
+        opacity: 1;
+    }
+    to{
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container>h1{
+    text-transform: capitalize;
+    font-variant: small-caps;
+    color: #2d3436;
+}
