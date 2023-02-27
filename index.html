@@ -11,11 +11,23 @@
 </head>
 <body>
     <div class="container">
-        <h1>Please enter [name & surname]</h1>
-        <input type="text" placeholder="Name" required>
-        <input type="text" placeholder="Surname" required>
-        <button type="button">Login</button>
-        <button type="button">Clear</button>
+        <div class="c-wrap">
+            <h1>Please enter [name & surname]</h1>
+            <input id="authname" type="text" placeholder="Name" required>
+            <input id="authsurname" type="text" placeholder="Surname" required>
+            <div class="btn-group">
+                <button onclick="loginAuth();" type="button">Login</button>
+                <button onclick="clearTextBox();" type="button">Clear</button>
+            </div>
+        </div>
+        <div class="success-auth-bar">
+            <span onclick="barClose();">&#10006;</span>
+            <img src="img/content/profile_photo.jpg" alt="Profile photo">
+            <p>Courses: STIMUL/SETHUB</p>
+            <p>Name: </p>
+            <p>Surname: </p>
+            <p>Fullstack web developer</p>
+        </div>
     </div>
 </body>
 </html>
